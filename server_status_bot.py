@@ -84,6 +84,5 @@ def send_to_slack(message):
 if __name__ == "__main__":
     while True:
         status_message = get_system_status()
-        print(status_message)
         send_to_slack(status_message)
         time.sleep(300)  # Sends update every 5 minutes

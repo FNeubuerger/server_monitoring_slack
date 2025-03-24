@@ -14,6 +14,5 @@ COPY requirements.txt .
 # Install dependencies from requirements.txt
 RUN pip install -r requirements.txt
 
-
 # Run the script
 CMD ["python", "server_status_bot.py"]
