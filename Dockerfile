@@ -8,9 +8,12 @@ WORKDIR /app
 COPY server_status_bot.py . 
 # Copy the secrets file to the container
 COPY secrets.json .
+# Copy the requirements file to the container
+COPY requirements.txt .
 
-# Install dependencies
-RUN pip install psutil slack-sdk gputil requests
+# Install dependencies from requirements.txt
+RUN pip install -r requirements.txt
+
 
 # Run the script
 CMD ["python", "server_status_bot.py"]
