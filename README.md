@@ -29,7 +29,7 @@ This repository contains a Slack bot designed to monitor server health and send 
     ```bash
     docker run -d --gpus all --name server_monitor slack-server-monitor
     ```
-## Installation
+## Manual Installation
 
 1. Clone the repository:
     ```bash
@@ -42,27 +42,16 @@ This repository contains a Slack bot designed to monitor server health and send 
     pip install -r requirements.txt
     ```
 
-3. Set up environment variables:
-    - `SLACK_BOT_TOKEN`: Your Slack bot token.
-    - `SLACK_CHANNEL_ID`: The ID of the Slack channel for notifications.
-
-4. Configure the monitoring settings in `config.json`.
+4. Configure the secrets settings in `secrets.json`.
 
 ## Usage
 
 Start the bot:
 ```bash
-python bot.py
+python server_status_bot.py
 ```
 
-The bot will begin monitoring your servers and send alerts to the configured Slack channel.
-
-## Configuration
-
-Edit the `config.json` file to define:
-- Server IPs or hostnames.
-- Resource usage thresholds (CPU, memory, disk).
-- Alert frequency.
+The bot will begin monitoring your servers and send messages to the configured Slack channel.
 
 ## Contributing
 
