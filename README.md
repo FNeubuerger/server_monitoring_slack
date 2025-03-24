@@ -23,11 +23,11 @@ This repository contains a Slack bot designed to monitor server health and send 
 
 2. Run the Docker container:
     ```bash
-    docker run -d --name server_monitor server-monitoring-slack
+    docker run -d --network=host --name server_monitor server-monitoring-slack
     ```
 3. If you need to run it on a system with a GPU (NVIDIA), make sure to use NVIDIA Container Toolkit:
     ```bash
-    docker run -d --gpus all --name server_monitor server-monitoring-slack
+    docker run -d --gpus all --network=host --name server_monitor server-monitoring-slack
     ```
 ## Manual Installation
 
